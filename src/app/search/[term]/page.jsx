@@ -1,6 +1,6 @@
 import Results from '@/components/Results'
 
-export default async function SearchPage({ params }) {
+const SearchPage = async ({ params }) => {
   const res = await fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${params.term}&language=en-US&page=1&include_adult=false`
   )
@@ -15,3 +15,5 @@ export default async function SearchPage({ params }) {
     </div>
   )
 }
+
+export default SearchPage
