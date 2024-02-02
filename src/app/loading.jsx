@@ -1,6 +1,6 @@
-import Image from "next/image"
+import Image from 'next/image'
 
-const loading = () => {
+const Loading = () => {
   return (
     <div className='mt-16 flex justify-center'>
       <Image className='h-52' src='/spinner.svg' alt='loading spinner' width={200} height={200}/>
@@ -8,4 +8,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default Loading
