@@ -9,7 +9,7 @@ export default async function SearchPage({ params }) {
   return (
     <div>
       {results && results.length === 0 && (
-        <h1 className="pt-6 text-center">No results found</h1>
+        <h1 className='pt-6 text-center'>No results found</h1>
       )}
       {results && <Results results={results} />}
     </div>
