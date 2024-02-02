@@ -1,7 +1,9 @@
+import Image from "next/image"
+
 const loading = () => {
   return (
     <div className='mt-16 flex justify-center'>
-      <img className='h-52' src='spinner.svg' alt='loading spinner'/>
+      <Image className='h-52' src='/spinner.svg' alt='loading spinner' width={200} height={200}/>
     </div>
   )
 }
