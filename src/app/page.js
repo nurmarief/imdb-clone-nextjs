@@ -1,12 +1,10 @@
 import Results from '@/components/Results'
 
-const { TMDB_API_KEY } = process.env
-
-export default async function Home({ searchParams }) {
+const Home = async ({ searchParams }) => {
   const genre = searchParams.genre || 'fetchTrending'
   const res = await fetch(
     `https://api.themoviedb.org/3${genre === 'fetchTrending' ? '/movie/top_rated' : '/trending/all/week'
-    }?api_key=${TMDB_API_KEY}&language=US&page=1`
+    }?api_key=${process.env.TMDB_API_KEY}&language=US&page=1`
   )
   const data = await res.json()
 
@@ -20,5 +18,7 @@ export default async function Home({ searchParams }) {
     <h1>
       <Results results={results} />
     </h1>
-  );
+  )
 }
+
+export default Home
